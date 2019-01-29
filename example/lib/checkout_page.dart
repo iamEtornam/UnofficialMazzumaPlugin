@@ -33,16 +33,7 @@ class CheckOutPage extends StatelessWidget {
               ),
               RaisedButton(
                 onPressed: () async {
-                    Dio dio = new Dio();
-                    Response response = await dio.get("https://www.google.com");
-                    print("data ${response.data}");
-                    print("header ${response.headers}" );
-                    print("request ${response.request}");
-                    print("status ${response.statusCode}" );
-
-
-
-                  showDialog(
+                      showDialog(
                       context: context,
                       builder: (context) => AlertDialog(
                           title: Text('Enter Payment Info',
