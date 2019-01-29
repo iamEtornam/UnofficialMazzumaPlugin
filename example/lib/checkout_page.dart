@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:unofficial_mazzuma_plugin/unofficial_mazzuma_plugin.dart';
 
@@ -31,7 +32,16 @@ class CheckOutPage extends StatelessWidget {
                 height: 15.0,
               ),
               RaisedButton(
-                onPressed: () {
+                onPressed: () async {
+                    Dio dio = new Dio();
+                    Response response = await dio.get("https://www.google.com");
+                    print("data ${response.data}");
+                    print("header ${response.headers}" );
+                    print("request ${response.request}");
+                    print("status ${response.statusCode}" );
+
+
+
                   showDialog(
                       context: context,
                       builder: (context) => AlertDialog(
@@ -52,7 +62,7 @@ class CheckOutPage extends StatelessWidget {
                                           16.0, 10.0, 16.0, 10.0),
                                       child: DropdownButton(
                                         iconSize: 45.0,
-                             
+
                                           items: <String>[
                                             'MTN',
                                             'TIGO',

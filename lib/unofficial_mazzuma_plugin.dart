@@ -4,6 +4,7 @@ import 'package:dio/dio.dart';
 
 class UnofficialMazzumaPlugin {
   Response response;
+  var status;
 
   Future processPayment(
       double price, ///The amount to be paid
@@ -26,6 +27,16 @@ class UnofficialMazzumaPlugin {
       "apikey": apiKey,
     });
 
-    return response; ///The response for a request contains the following information. response.data, response.headers, response.request, response.statusCode
+    if(response.data.toString().contains("Successful")){
+        status = "Successful";
+    }else if(response.data.toString().contains("Failed")){
+      status = "Failed";
+    }else if(response.data.toString().contains("Pending")){
+      status = "Pending";
+    }else{
+      status = "error";
+    }
+
+    return status; ///The response for a request contains the following information. response.data, response.headers, response.request, response.statusCode
   }
 }
