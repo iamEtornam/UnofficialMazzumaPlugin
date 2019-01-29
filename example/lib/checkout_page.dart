@@ -1,4 +1,3 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:unofficial_mazzuma_plugin/unofficial_mazzuma_plugin.dart';
 
@@ -33,7 +32,7 @@ class CheckOutPage extends StatelessWidget {
               ),
               RaisedButton(
                 onPressed: () async {
-                      showDialog(
+                  showDialog(
                       context: context,
                       builder: (context) => AlertDialog(
                           title: Text('Enter Payment Info',
@@ -52,8 +51,7 @@ class CheckOutPage extends StatelessWidget {
                                       padding: EdgeInsets.fromLTRB(
                                           16.0, 10.0, 16.0, 10.0),
                                       child: DropdownButton(
-                                        iconSize: 45.0,
-
+                                          iconSize: 45.0,
                                           items: <String>[
                                             'MTN',
                                             'TIGO',
