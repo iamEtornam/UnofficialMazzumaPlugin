@@ -39,4 +39,11 @@ class UnofficialMazzumaPlugin {
 
     return status; ///The response for a request contains the following information. response.data, response.headers, response.request, response.statusCode
   }
+
+  ///This plugin can be used by importing and initialise it then provide the required parameters
+///import 'package:unofficial_mazzuma_plugin/unofficial_mazzuma_plugin.dart';
+///
+///UnofficialMazzumaPlugin mazzumaPlugin = new UnofficialMazzumaPlugin();
+///
+///mazzumaPlugin.processPayment(paymentAmount, userNetwork, myNumber, userNumber, paymentOption, myApiKey);
 }

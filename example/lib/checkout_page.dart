@@ -98,7 +98,8 @@ class CheckOutPage extends StatelessWidget {
                                     padding: EdgeInsets.fromLTRB(
                                         16.0, 5.0, 16.0, 10.0),
                                     child: ButtonTheme(
-                                      buttonColor: Theme.of(context).primaryColor,
+                                      buttonColor:
+                                          Theme.of(context).primaryColor,
                                       minWidth: double.infinity,
                                       height: 45.0,
                                       child: MaterialButton(
@@ -159,7 +160,8 @@ class CheckOutPage extends StatelessWidget {
     print("user Number is: $userNumber");
     print("myApiKey is: $myApiKey");
 
-    var response = mazzumaPlugin.processPayment(paymentAmount, userNetwork, myNumber, userNumber, paymentOption, myApiKey);
+    var response = mazzumaPlugin.processPayment(paymentAmount, userNetwork,
+        myNumber, userNumber, paymentOption, myApiKey);
     response.then(print);
   }
 }
