@@ -28,13 +28,13 @@ class UnofficialMazzumaPlugin {
     });
 
     if(response.data.toString().contains("Successful")){
-        status = "Successful";
+        status = "Successful: ${response.data}";
     }else if(response.data.toString().contains("Failed")){
-      status = "Failed";
+      status = "Failed: ${response.data}";
     }else if(response.data.toString().contains("Pending")){
-      status = "Pending";
+      status = "Pending: ${response.data}";
     }else{
-      status = "error";
+      status = "error: ${response.data}";
     }
 
     return status; ///The response for a request contains the following information. response.data, response.headers, response.request, response.statusCode
