@@ -5,6 +5,7 @@ class CheckOutPage extends StatelessWidget {
   final amountController = TextEditingController();
   final numberController = TextEditingController();
   String isSelected;
+  UnofficialMazzumaPlugin mazzumaPlugin = new UnofficialMazzumaPlugin();
 
   @override
   Widget build(BuildContext context) {
@@ -140,7 +141,7 @@ class CheckOutPage extends StatelessWidget {
       String userNetwork, String userNumber, double paymentAmount) {
     String paymentOption;
     String myNumber = "0245436757"; //mtn number
-    String myApiKey = "";
+    String myApiKey = "null";
 
     if (userNetwork == "AIRTEL") {
       paymentOption = "ratm";
@@ -151,9 +152,14 @@ class CheckOutPage extends StatelessWidget {
     } else {
       paymentOption = "unknown";
     }
+    print("network is: $userNetwork");
+    print("payemnt option is: $paymentOption");
+    print("payment amount is: $paymentAmount");
+    print("my number is: $myNumber");
+    print("user Number is: $userNumber");
+    print("myApiKey is: $myApiKey");
 
-    UnofficialMazzumaPlugin mazzumaPlugin = new UnofficialMazzumaPlugin();
-    mazzumaPlugin.processPayment(paymentAmount, userNetwork, myNumber,
-        userNumber, paymentOption, myApiKey);
+    var response = mazzumaPlugin.processPayment(paymentAmount, userNetwork, myNumber, userNumber, paymentOption, myApiKey);
+    response.then(print);
   }
 }
