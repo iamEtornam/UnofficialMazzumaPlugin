@@ -97,11 +97,11 @@ class CheckOutPage extends StatelessWidget {
                                     padding: EdgeInsets.fromLTRB(
                                         16.0, 5.0, 16.0, 10.0),
                                     child: ButtonTheme(
-                                      buttonColor: Colors.pink,
+                                      buttonColor: Theme.of(context).primaryColor,
                                       minWidth: double.infinity,
                                       height: 45.0,
                                       child: MaterialButton(
-                                        color: Colors.pink,
+                                        color: Theme.of(context).primaryColor,
                                         onPressed: () async {
                                           makePayment(
                                               isSelected,
