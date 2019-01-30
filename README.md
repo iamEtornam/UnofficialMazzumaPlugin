@@ -42,9 +42,10 @@ UnofficialMazzumaPlugin mazzumaPlugin = new UnofficialMazzumaPlugin();
     String myNumber = "YOUR-MOBILE-NUMBER-HERE"; 
     String myApiKey = "YOUR-API-KEY-HERE";
     
-//This denotes the direction of cash flow. For example, ```rmta``` can be understood as an acronym of the phrase ‘receive mtn to airtel’, 
-// which means you would be receiving money to your Airtel account (the recipient number) from an MTN number(the sender). 
-// This format would hold for all transaction requests sent to the API. Do not forget to append the r at beginning.
+//This denotes the direction of cash flow. For example, ```rmta``` can be understood as an acronym of the phrase
+// ‘receive mtn to airtel’, which means you would be receiving money to your Airtel account (the recipient number) 
+// from an MTN number(the sender). This format would hold for all transaction requests sent to the API.
+// Do not forget to append the r at beginning.
     if (userNetwork == "AIRTEL") {
       paymentOption = "ratm"; 
     } else if (userNetwork == "MTN") {
