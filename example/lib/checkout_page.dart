@@ -141,7 +141,7 @@ class CheckOutPage extends StatelessWidget {
   void makePayment(
       String userNetwork, String userNumber, double paymentAmount) {
     String paymentOption;
-    String myNumber = "YOUR-MOBILE-NUMBER-HERE"; //mtn number
+    String myNumber = "YOUR-MOBILE-NUMBER-HERE";
     String myApiKey = "YOUR-API-KEY-HERE";
 
     if (userNetwork == "AIRTEL") {

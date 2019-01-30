@@ -1,8 +1,8 @@
 name: unofficial_mazzuma_plugin
 description: This is an unofficial implementation of Mazzuma&#x27;s payment Api in flutter
 version: 0.0.1
-author:
-homepage:
+author: Sunu Bright Etornam
+homepage: https://dev-etornam.firebaseapp.com
 
 environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"
