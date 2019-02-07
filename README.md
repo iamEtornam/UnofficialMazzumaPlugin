@@ -1,6 +1,6 @@
 # unofficial_mazzuma_plugin
 
-This is an unofficial implementation of Mazzuma&#x27;s payment Api in flutter
+This is an unofficial implementation of Mazzuma's payment Api in flutter
 
 ## Getting Started
 
