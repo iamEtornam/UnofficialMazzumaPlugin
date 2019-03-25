@@ -6,7 +6,7 @@
   
 [![made-with-Flutter](https://img.shields.io/badge/Made%20with-Flutter-blue.svg)](https://www.flutter.io/)
 
-[![made-with-Dart](https://img.shields.io/badge/Made%20with-Flutter-green.svg)](https://www.dartlang.org/)
+[![made-with-Dart](https://img.shields.io/badge/Made%20with-Dart-yellow.svg)](https://www.dartlang.org/)
 
 [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://github.com/RegNex/)
 </p>
