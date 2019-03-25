@@ -1,4 +1,9 @@
 # unofficial_mazzuma_plugin
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/RegNex/UnofficialMazzumaPlugin/graphs/commit-activity)
+[![made-with-Flutter](https://img.shields.io/badge/Made%20with-Flutter-blue.svg)](https://www.flutter.io/)
+[![ForTheBadge uses-dart](http://ForTheBadge.com/images/badges/uses-dart.svg)](https://www.dartlang.org/)
+[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://github.com/RegNex/)
+</p>
 
 This is an unofficial implementation of Mazzuma's payment Api in flutter
 
