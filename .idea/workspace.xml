@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4add337-f070-460e-8b5c-aa337003a9de" name="Default Changelist" comment="clean up code" />
+    <list default="true" id="c4add337-f070-460e-8b5c-aa337003a9de" name="Default Changelist" comment="updated README.md">
+      <change beforePath="$PROJECT_DIR$/test/UnofficialMazzumaPlugin_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/UnofficialMazzumaPlugin_test.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611739710011</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="updated README.md">
+      <created>1611739959390</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1611739959391</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,6 +132,29 @@
     <MESSAGE value="added response class" />
     <MESSAGE value="migrated to androidX and flutter v2" />
     <MESSAGE value="clean up code" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean up code" />
+    <MESSAGE value="updated README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated README.md" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1038" height="283" key="GridCell.Tab.0.bottom" timestamp="1611739969353">
+      <screen x="1792" y="0" width="1080" height="1920" />
+    </state>
+    <state width="1038" height="283" key="GridCell.Tab.0.bottom/1792.0.1080.1920/0.0.1792.1120@1792.0.1080.1920" timestamp="1611739969353" />
+    <state width="1038" height="283" key="GridCell.Tab.0.center" timestamp="1611739969351">
+      <screen x="1792" y="0" width="1080" height="1920" />
+    </state>
+    <state width="1038" height="283" key="GridCell.Tab.0.center/1792.0.1080.1920/0.0.1792.1120@1792.0.1080.1920" timestamp="1611739969351" />
+    <state width="1038" height="283" key="GridCell.Tab.0.left" timestamp="1611739969350">
+      <screen x="1792" y="0" width="1080" height="1920" />
+    </state>
+    <state width="1038" height="283" key="GridCell.Tab.0.left/1792.0.1080.1920/0.0.1792.1120@1792.0.1080.1920" timestamp="1611739969350" />
+    <state width="1038" height="283" key="GridCell.Tab.0.right" timestamp="1611739969352">
+      <screen x="1792" y="0" width="1080" height="1920" />
+    </state>
+    <state width="1038" height="283" key="GridCell.Tab.0.right/1792.0.1080.1920/0.0.1792.1120@1792.0.1080.1920" timestamp="1611739969352" />
+    <state x="1792" y="28" width="1415" height="1041" key="Vcs.Push.Dialog.v2" timestamp="1611739733061">
+      <screen x="1792" y="25" width="1080" height="1895" />
+    </state>
+    <state x="1792" y="28" width="1415" height="1041" key="Vcs.Push.Dialog.v2/1792.25.1080.1895/0.25.1792.1041@1792.25.1080.1895" timestamp="1611739733061" />
   </component>
 </project>

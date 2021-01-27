@@ -1,8 +1,9 @@
 name: unofficial_mazzuma_plugin
 description: This is an unofficial implementation of Mazzuma&#x27;s payment Api in flutter
-version: 0.0.1
-author: Sunu Bright Etornam
-homepage: https://dev-etornam.firebaseapp.com
+version: 0.0.2
+author: Sunu Bright Etornam <sunumacbright@gmail.com>
+homepage: https://github.com/RegNex/UnofficialMazzumaPlugin
+maintainer: Sunu Bright Etornam (@RegNex)
 
 environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"
@@ -11,7 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  dio: ^1.0.14
+  dio: ^3.0.10
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
