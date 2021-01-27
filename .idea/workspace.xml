@@ -19,8 +19,30 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4add337-f070-460e-8b5c-aa337003a9de" name="Default Changelist" comment="updated README.md">
-      <change beforePath="$PROJECT_DIR$/test/UnofficialMazzumaPlugin_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/UnofficialMazzumaPlugin_test.dart" afterDir="false" />
+    <list default="true" id="c4add337-f070-460e-8b5c-aa337003a9de" name="Default Changelist" comment="clean test code">
+      <change afterPath="$PROJECT_DIR$/lib/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/co/etornam/unofficialmazzumaplugin/UnofficialMazzumaPlugin.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/checkout_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/checkout_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/test/api_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/test/api_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/test/widget_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/SwiftUnofficialMazzumaPlugin.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/UnofficialMazzumaPlugin.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/UnofficialMazzumaPlugin.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/unofficial_mazzuma_plugin.podspec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/UnofficialMazzumaPlugin.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/model/custom_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/custom_response.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/unofficial_mazzuma_plugin.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/unofficial_mazzuma_plugin.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +74,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/lib/src" />
     </key>
   </component>
@@ -114,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611739959391</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="clean test code">
+      <created>1611740133160</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1611740133160</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -133,7 +163,8 @@
     <MESSAGE value="migrated to androidX and flutter v2" />
     <MESSAGE value="clean up code" />
     <MESSAGE value="updated README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated README.md" />
+    <MESSAGE value="clean test code" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean test code" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1038" height="283" key="GridCell.Tab.0.bottom" timestamp="1611739969353">

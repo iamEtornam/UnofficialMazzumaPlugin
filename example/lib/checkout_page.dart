@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:unofficial_mazzuma_plugin/src/unofficial_mazzuma_plugin.dart';
+import 'package:unofficial_mazzuma_plugin/unofficial_mazzuma_plugin.dart';
 
 class CheckOutPage extends StatelessWidget {
   final amountController = TextEditingController();

@@ -1,7 +1,8 @@
 import 'dart:async';
 
 import 'package:dio/dio.dart';
-import 'package:unofficial_mazzuma_plugin/src/model/custom_response.dart';
+
+import 'model/custom_response.dart';
 
 class UnofficialMazzumaPlugin {
   Response response;
@@ -14,7 +15,7 @@ class UnofficialMazzumaPlugin {
       String option, ///This denotes the direction of cash flow. For example, rmta can be understood as an acronym of the phrase ‘receive mtn to airtel’, which means you would be receiving money to your Airtel account (the recipient number) from an MTN number(the sender). This format would hold for all transaction requests sent to the API. Do not forget to append the r at beginning
       String apiKey ///The API key generated when you created the Mazzuma Business account. This can be accessed or changed via the web dashboard.
       ) async {
-    Options options = new Options(
+    BaseOptions options = BaseOptions(
       baseUrl: "https://client.teamcyst.com",
     );
 

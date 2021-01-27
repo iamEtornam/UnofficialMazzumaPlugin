@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:unofficial_mazzuma_plugin/src/unofficial_mazzuma_plugin.dart';
+import 'package:unofficial_mazzuma_plugin/unofficial_mazzuma_plugin.dart';
 
 void main() {
   test('payment processor', () {
