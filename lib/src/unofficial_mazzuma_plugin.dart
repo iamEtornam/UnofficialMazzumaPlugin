@@ -1,12 +1,12 @@
 import 'dart:async';
 
 import 'package:dio/dio.dart';
+import 'package:unofficial_mazzuma_plugin/src/model/custom_response.dart';
 
 class UnofficialMazzumaPlugin {
   Response response;
-  var status;
 
-  Future processPayment(
+  Future<CustomResponse> processPayment(
       double price, ///The amount to be paid
       String network, ///This is the network of the mobile money account that would be making the payment (your customer)
       String recipientNumber, ///This is the mobile money account the payments shall end up in. (your account).
@@ -17,7 +17,9 @@ class UnofficialMazzumaPlugin {
     Options options = new Options(
       baseUrl: "https://client.teamcyst.com",
     );
+
     Dio dio = new Dio(options);
+
     response = await dio.post("/api_call.php", data: {
       "price": price,
       "network": network,
@@ -27,23 +29,15 @@ class UnofficialMazzumaPlugin {
       "apikey": apiKey,
     });
 
-    if(response.data.toString().contains("Successful")){
-        status = "Successful: ${response.data}";
-    }else if(response.data.toString().contains("Failed")){
-      status = "Failed: ${response.data}";
-    }else if(response.data.toString().contains("Pending")){
-      status = "Pending: ${response.data}";
-    }else{
-      status = "error: ${response.data}";
-    }
+    CustomResponse customResponse = CustomResponse.fromMap(response.data); ///The response for a request contains the following information. response.data, response.headers, response.request, response.statusCode
 
-    return status; ///The response for a request contains the following information. response.data, response.headers, response.request, response.statusCode
+    return customResponse;
   }
 
   ///This plugin can be used by importing and initialise it then provide the required parameters
 ///import 'package:unofficial_mazzuma_plugin/unofficial_mazzuma_plugin.dart';
 ///
-///UnofficialMazzumaPlugin mazzumaPlugin = new UnofficialMazzumaPlugin();
+///UnofficialMazzumaPlugin mazzumaPlugin = UnofficialMazzumaPlugin();
 ///
-///mazzumaPlugin.processPayment(paymentAmount, userNetwork, myNumber, userNumber, paymentOption, myApiKey);
+///CustomResponse customResponse = mazzumaPlugin.processPayment(paymentAmount, userNetwork, myNumber, userNumber, paymentOption, myApiKey);
 }
