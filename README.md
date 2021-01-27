@@ -65,14 +65,14 @@ from an MTN number(the sender). This format would hold for all transaction reque
       paymentOption = "unknown";
     }
     print("network is: $userNetwork");
-    print("payemnt option is: $paymentOption");
+    print("payment option is: $paymentOption");
     print("payment amount is: $paymentAmount");
     print("my number is: $myNumber");
     print("user Number is: $userNumber");
     print("myApiKey is: $myApiKey");
 
-    var response = mazzumaPlugin.processPayment(paymentAmount, userNetwork,
+    CustomResponse customResponse = mazzumaPlugin.processPayment(paymentAmount, userNetwork,
         myNumber, userNumber, paymentOption, myApiKey);
-    response.then(print);
+    print(CustomResponse.toMap());
   }
 ```
