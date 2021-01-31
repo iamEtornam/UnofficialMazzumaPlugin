@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:unofficial_mazzuma_plugin/unofficial_mazzuma_plugin.dart';
 
 class CheckOutPage extends StatelessWidget {
+
+
   final amountController = TextEditingController();
   final numberController = TextEditingController();
-  String isSelected;
-  UnofficialMazzumaPlugin mazzumaPlugin = new UnofficialMazzumaPlugin();
+  final UnofficialMazzumaPlugin mazzumaPlugin = new UnofficialMazzumaPlugin();
 
   @override
   Widget build(BuildContext context) {
+    String isSelected;
     return Scaffold(
       appBar: AppBar(
         title: Text('checkout'),
@@ -55,8 +57,8 @@ class CheckOutPage extends StatelessWidget {
                                           iconSize: 45.0,
                                           items: <String>[
                                             'MTN',
-                                            'TIGO',
-                                            'AIRTEL'
+                                            'VODAFONE',
+                                            'AIRTELTIGO'
                                           ].map((String value) {
                                             return DropdownMenuItem<String>(
                                               value: value,
@@ -105,11 +107,15 @@ class CheckOutPage extends StatelessWidget {
                                       child: MaterialButton(
                                         color: Theme.of(context).primaryColor,
                                         onPressed: () async {
-                                          makePayment(
-                                              isSelected,
-                                              numberController.text,
-                                              double.parse(
-                                                  amountController.text));
+                                          String apiKey = 'API-KEY-HERE';
+                                          if (isSelected == "VODAFONE"){
+                                          String token = "TOKEN HERE";//Paying with Vodafone. Costumer must generate token from USSD. Dial *110#; Select Option 4 Select Option *Enter Vod Cash Pin *Check SMS
+                                          mazzumaPlugin.vicVodPay( numberController.text, "MTN", "0246346343" ,double.parse(amountController.text),apiKey, token);
+                                        }
+                                        else{
+                                           mazzumaPlugin.sunuPay(isSelected, numberController.text, "MTN", "0246346343",double.parse(amountController.text),apiKey);
+
+                                        }
                                         },
                                         child: Text(
                                           'Process Payment',
@@ -136,32 +142,5 @@ class CheckOutPage extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  void makePayment(
-      String userNetwork, String userNumber, double paymentAmount) {
-    String paymentOption;
-    String myNumber = "YOUR-MOBILE-NUMBER-HERE";
-    String myApiKey = "YOUR-API-KEY-HERE";
-
-    if (userNetwork == "AIRTEL") {
-      paymentOption = "ratm";
-    } else if (userNetwork == "MTN") {
-      paymentOption = "rmtm";
-    } else if (userNetwork == "TIGO") {
-      paymentOption = "rttm";
-    } else {
-      paymentOption = "unknown";
-    }
-    print("network is: $userNetwork");
-    print("payemnt option is: $paymentOption");
-    print("payment amount is: $paymentAmount");
-    print("my number is: $myNumber");
-    print("user Number is: $userNumber");
-    print("myApiKey is: $myApiKey");
-
-    var response = mazzumaPlugin.processPayment(paymentAmount, userNetwork,
-        myNumber, userNumber, paymentOption, myApiKey);
-    response.then(print);
   }
 }
