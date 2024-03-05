@@ -1,8 +1,8 @@
 name: unofficial_mazzuma_plugin
 description: This is an unofficial implementation of Mazzuma&#x27;s payment Api in flutter
-version: 0.0.2
-homepage: https://github.com/RegNex/UnofficialMazzumaPlugin
-maintainer: Sunu Bright Etornam (@RegNex)
+version: 0.0.3
+homepage: https://github.com/iamEtornam/UnofficialMazzumaPlugin
+maintainer: Sunu Bright Etornam (@iamEtornam)
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
