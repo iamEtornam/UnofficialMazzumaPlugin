@@ -8,38 +8,45 @@ class UnofficialMazzumaPlugin {
   Response? response;
 
   Future<CustomResponse?> processPayment(
-      double price,
+      {
+      /// The amount to be paid in peswes (GHS 1.00 = 100peswes)
+      required int price,
 
-      ///The amount to be paid
-      String network,
+      ///This is the mobile network of the mobile money account that would be making the payment to (your account)
+      required String network,
 
-      ///This is the network of the mobile money account that would be making the payment (your customer)
-      String recipientNumber,
+      ///This is the mobile number of the mobile money account that would be making the payment (your customer)
+      required String recipientNumber,
 
       ///This is the mobile money account the payments shall end up in. (your account).
-      String sender,
-
-      ///This is the mobile money account that would be making the payment (your customers)
-      String option,
+      required String sender,
 
       ///This denotes the direction of cash flow. For example, rmta can be understood as an acronym of the phrase ‘receive mtn to airtel’, which means you would be receiving money to your Airtel account (the recipient number) from an MTN number(the sender). This format would hold for all transaction requests sent to the API. Do not forget to append the r at beginning
-      String apiKey
+      required String option,
+
+      ///This is the network of the mobile money account that would be making the payment (your customers)
+      required String recipientNetwork,
+
+      /// The order id (optional)
+      String? orderId,
 
       ///The API key generated when you created the Mazzuma Business account. This can be accessed or changed via the web dashboard.
-      ) async {
+      required String apiKey}) async {
     BaseOptions options = BaseOptions(
-      baseUrl: "https://client.teamcyst.com",
+      baseUrl: "https://api.mazzuma.com/v2",
     );
 
     Dio dio = new Dio(options);
 
-    response = await dio.post("/api_call.php", data: {
+    response = await dio.post("/money/transfer", data: {
       "price": price,
       "network": network,
       "recipient_number": recipientNumber,
+      "recipient_network": recipientNetwork,
       "sender": sender,
       "option": option,
       "apikey": apiKey,
+      "order_id": orderId
     });
     if (response == null) return null;
     CustomResponse customResponse = CustomResponse.fromMap(response!.data);
