@@ -114,11 +114,13 @@ class _CheckOutPageState extends State<CheckOutPage> {
                                         color: Theme.of(context).primaryColor,
                                         onPressed: () async {
                                           if (isSelected == null) return;
+                                          final price = double.parse(
+                                                  amountController.text) *
+                                              100;
                                           makePayment(
                                               isSelected!,
                                               numberController.text,
-                                              double.parse(
-                                                  amountController.text));
+                                              price.toInt());
                                         },
                                         child: Text(
                                           'Process Payment',
@@ -148,11 +150,11 @@ class _CheckOutPageState extends State<CheckOutPage> {
     );
   }
 
-  void makePayment(
-      String userNetwork, String userNumber, double paymentAmount) {
+  void makePayment(String userNetwork, String userNumber, int paymentAmount) {
     String paymentOption;
     String myNumber = "YOUR-MOBILE-NUMBER-HERE";
     String myApiKey = "YOUR-API-KEY-HERE";
+    String recipientNetwork = "";
 
     if (userNetwork == "AIRTEL") {
       paymentOption = "ratm";
@@ -168,10 +170,17 @@ class _CheckOutPageState extends State<CheckOutPage> {
     print("payment amount is: $paymentAmount");
     print("my number is: $myNumber");
     print("user Number is: $userNumber");
+    print("user Number is: $userNumber");
     print("myApiKey is: $myApiKey");
 
-    var response = mazzumaPlugin.processPayment(paymentAmount, userNetwork,
-        myNumber, userNumber, paymentOption, myApiKey);
+    var response = mazzumaPlugin.processPayment(
+        price: paymentAmount,
+        network: userNetwork,
+        sender: myNumber,
+        recipientNumber: userNumber,
+        recipientNetwork: recipientNetwork,
+        option: paymentOption,
+        apiKey: myApiKey);
     response.then(print);
   }
 }
