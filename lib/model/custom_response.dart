@@ -4,15 +4,16 @@
 
 import 'dart:convert';
 
-CustomResponse customResponseFromMap(String str) => CustomResponse.fromMap(json.decode(str));
+CustomResponse customResponseFromMap(String str) =>
+    CustomResponse.fromMap(json.decode(str));
 
 String customResponseToMap(CustomResponse data) => json.encode(data.toMap());
 
 class CustomResponse {
   CustomResponse({
-    this.code,
-    this.status,
-    this.id,
+    required this.code,
+    required this.status,
+    required this.id,
   });
 
   int code;
@@ -20,14 +21,14 @@ class CustomResponse {
   String id;
 
   factory CustomResponse.fromMap(Map<String, dynamic> json) => CustomResponse(
-    code: json["code"] == null ? null : json["code"],
-    status: json["status"] == null ? null : json["status"],
-    id: json["id"] == null ? null : json["id"],
-  );
+        code: json["code"] == null ? null : json["code"],
+        status: json["status"] == null ? null : json["status"],
+        id: json["id"] == null ? null : json["id"],
+      );
 
   Map<String, dynamic> toMap() => {
-    "code": code == null ? null : code,
-    "status": status == null ? null : status,
-    "id": id == null ? null : id,
-  };
+        "code": code,
+        "status": status,
+        "id": id,
+      };
 }

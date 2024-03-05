@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:unofficial_mazzuma_plugin/unofficial_mazzuma_plugin.dart';
 
-class CheckOutPage extends StatelessWidget {
+class CheckOutPage extends StatefulWidget {
+  @override
+  State<CheckOutPage> createState() => _CheckOutPageState();
+}
+
+class _CheckOutPageState extends State<CheckOutPage> {
   final amountController = TextEditingController();
+
   final numberController = TextEditingController();
-  String isSelected;
+
+  String? isSelected;
+
   UnofficialMazzumaPlugin mazzumaPlugin = new UnofficialMazzumaPlugin();
 
   @override
@@ -31,7 +39,7 @@ class CheckOutPage extends StatelessWidget {
               SizedBox(
                 height: 15.0,
               ),
-              RaisedButton(
+              ElevatedButton(
                 onPressed: () async {
                   showDialog(
                       context: context,
@@ -63,7 +71,7 @@ class CheckOutPage extends StatelessWidget {
                                               child: Text(value),
                                             );
                                           }).toList(),
-                                          onChanged: (String value) {
+                                          onChanged: (String? value) {
                                             isSelected = value;
                                           })),
                                   Padding(
@@ -105,8 +113,9 @@ class CheckOutPage extends StatelessWidget {
                                       child: MaterialButton(
                                         color: Theme.of(context).primaryColor,
                                         onPressed: () async {
+                                          if (isSelected == null) return;
                                           makePayment(
-                                              isSelected,
+                                              isSelected!,
                                               numberController.text,
                                               double.parse(
                                                   amountController.text));
@@ -126,9 +135,10 @@ class CheckOutPage extends StatelessWidget {
                             ),
                           )));
                 },
-                color: Theme.of(context).primaryColor,
-                textColor: Colors.white,
-                padding: EdgeInsets.all(16.0),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Theme.of(context).primaryColor,
+                  padding: EdgeInsets.all(16.0),
+                ),
                 child: Text('Make Payment'),
               )
             ],
