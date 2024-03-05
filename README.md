@@ -2,10 +2,10 @@
 
 <p align="center">
     
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/RegNex/UnofficialMazzumaPlugin/graphs/commit-activity)
-[![made-with-Flutter](https://img.shields.io/badge/Made%20with-Flutter-blue.svg)](https://www.flutter.io/)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/iamEtornam/UnofficialMazzumaPlugin/graphs/commit-activity)
+[![made-with-Flutter](https://img.shields.io/badge/Made%20with-Flutter-blue.svg)](https://www.flutter.dev/)
 [![made-with-Dart](https://img.shields.io/badge/Made%20with-Dart-yellow.svg)](https://www.dartlang.org/)
-[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://github.com/RegNex/)
+[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://github.com/iamEtornam/)
 </p>
 
 This is an unofficial implementation of Mazzuma's payment Api in flutter
@@ -45,7 +45,7 @@ import 'package:unofficial_mazzuma_plugin/unofficial_mazzuma_plugin.dart';
 
 UnofficialMazzumaPlugin mazzumaPlugin = new UnofficialMazzumaPlugin();
 
- void makePayment(String userNetwork, String userNumber, double paymentAmount) {
+ void makePayment({required String userNetwork,required String userNumber,required double paymentAmount}) {
     String paymentOption;
     String myNumber = "YOUR-MOBILE-NUMBER-HERE"; 
     String myApiKey = "YOUR-API-KEY-HERE";
@@ -71,7 +71,7 @@ from an MTN number(the sender). This format would hold for all transaction reque
     print("user Number is: $userNumber");
     print("myApiKey is: $myApiKey");
 
-    CustomResponse customResponse = mazzumaPlugin.processPayment(paymentAmount, userNetwork,
+    final customResponse = mazzumaPlugin.processPayment(paymentAmount, userNetwork,
         myNumber, userNumber, paymentOption, myApiKey);
     print(CustomResponse.toMap());
   }
