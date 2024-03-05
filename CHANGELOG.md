@@ -10,3 +10,8 @@
 ## 0.0.3
 
 - Migrate to null safety
+
+## 0.0.4
+
+- Update base API
+- Update docs

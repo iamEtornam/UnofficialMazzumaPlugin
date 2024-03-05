@@ -1,6 +1,6 @@
 name: unofficial_mazzuma_plugin
 description: This is an unofficial implementation of Mazzuma&#x27;s payment Api in flutter
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/iamEtornam/UnofficialMazzumaPlugin
 maintainer: Sunu Bright Etornam (@iamEtornam)
 
