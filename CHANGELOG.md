@@ -6,3 +6,7 @@
 
 - Return Custom Response class
 - Update dependencies
+
+## 0.0.3
+
+- Migrate to null safety
